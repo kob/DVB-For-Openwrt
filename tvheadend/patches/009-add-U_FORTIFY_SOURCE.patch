@@ -1,1 +1,13 @@
+diff -ruN tvheadend.orig/Makefile tvheadend/Makefile
+--- tvheadend.orig/Makefile	2017-10-18 16:39:58.000000000 +0300
++++ tvheadend/Makefile	2017-12-13 00:49:51.314127208 +0300
+@@ -39,7 +39,7 @@
+ifeq ($(CONFIG_CCDEBUG),yes)
+CFLAGS  += -O0
+else
+- CFLAGS  += -O2 -D_FORTIFY_SOURCE=2
++ CFLAGS  += -O2  -U_FORTIFY_SOURCE  -D_FORTIFY_SOURCE=2
+endif
+ifeq ($(CONFIG_PIE),yes)
+CFLAGS  += -fPIE
 
